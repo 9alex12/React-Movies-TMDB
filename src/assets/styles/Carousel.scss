@@ -1,0 +1,102 @@
+.carouselItemContainer{
+  display: flex;
+  overflow-x: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: black; 
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(134, 134, 134, 0.3); 
+    border-radius: 50px;
+    
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+
+.carouselItem{
+  min-width: 120px;
+  height: 190px;
+  background-color: orange;
+  margin:0px 10px;
+  position: relative;
+  
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &:hover{
+    transform:translateY(-7px);
+    transition:transform 0.4s;
+    .itemInfo{
+      visibility: visible;
+      opacity: 1;
+      cursor: pointer;
+    }
+    .barraWhite{
+      width: 60%
+    }
+
+    &:after {
+      content: '';
+      background: linear-gradient(0, rgba(0, 0, 0, 0.7), transparent);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+    }
+  }
+}
+
+
+.itemInfo{
+  opacity: 0;
+  margin-left: 10px;
+  bottom: 10px;
+  position: absolute;
+  transition: opacity .5s ease;
+  z-index: 1;
+
+  h2{
+    margin: 0;
+  }
+
+  h3{
+    margin: 0;
+    color: gray;
+  }
+}
+
+.barra{
+  margin:0px;
+  display: flex;
+  background-color: gray;
+  height: 3px;
+  border-radius: 30%;
+  border-top-left-radius:0;  
+}
+
+.barraWhite{
+  background-color: white;
+  height: 3px;
+  width: 10%;
+  border-radius: 30%;
+  border-top-right-radius:0;
+  transition: width 1s ease;
+}

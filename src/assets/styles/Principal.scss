@@ -1,0 +1,33 @@
+
+.principal{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0, black, transparent) , url(https://a-static.besthdwallpaper.com/raya-and-the-last-dragon-movie-poster-2021-papel-pintado-63009_L.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; //PARALLAX
+    background-position: center;
+    height: 500px;
+    margin-top:-50px;
+}
+
+.sectionPrincipal{
+  width: 500px;
+  height: 250px;
+  color:white;
+  font-size: 25px;
+  line-height: 45px;
+  justify-content: start;
+  margin: 70px 0 0 70px;
+  h1{
+    text-transform: uppercase;
+    padding-left: 0;
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  
+}
+
+.buttonsContainer{
+  display: flex;
+}
